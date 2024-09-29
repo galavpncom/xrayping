@@ -62,6 +62,28 @@ This will output the VPN URI as a Sing-Box compatible JSON.
 
 ---
 
+### Random-Test Sub-Command
+
+The `random-test` sub-command allows you to randomly select IPs from a subnet list and test their latency.
+
+```bash
+xrayping random-test --subnet-list /path/to/subnet-list.txt --count <number-of-ips>
+```
+
+- `--subnet-list`: Path to the file containing the subnets.
+- `--count`: Number of random IPs to test (default: 10).
+- Additional flags like `--config`, `--xray-path`, `--socks5`, `--retry`, and `--url` can be used as well.
+
+#### Example:
+
+```bash
+xrayping random-test --subnet-list ./samples/cloudflare_ips.txt --count 25 --config ./config.json --socks5 127.0.0.1:10808 --retry 3
+```
+
+This will randomly select 25 IPs from the Cloudflare IP ranges and test their latency.
+
+---
+
 ## Flags
 
 The following flags are available for the application:
