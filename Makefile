@@ -4,7 +4,7 @@ GO_FMT=$(GO_CMD) fmt
 GO_CLEAN=$(GO_CMD) clean
 GO_MOD_DOWNLOAD=$(GO_CMD) mod download
 
-BINARY_NAME=ipdelay
+BINARY_NAME=xrayping
 BUILD_DIR=./build/bin
 
 # Platforms
