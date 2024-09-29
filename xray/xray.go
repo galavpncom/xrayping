@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"os/exec"
+	"time"
 
 	"github.com/galavpncom/xrayping/utils"
 )
@@ -36,6 +37,7 @@ func (xm *Manager) Start(config map[string]interface{}) (*exec.Cmd, error) {
 		fmt.Println(utils.WrapTextWithColor("Xray proxy started.", utils.ColorYellow))
 	}
 
+	time.Sleep(2 * time.Second) // Wait for Xray to establish the proxy
 	return cmd, nil
 }
 
