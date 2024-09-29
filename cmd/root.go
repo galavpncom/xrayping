@@ -27,8 +27,8 @@ func Execute() error {
 }
 
 var rootCmd = &cobra.Command{
-	Use:   "ipdelay",
-	Short: "IP delay tester with Xray",
+	Use:   "xrayping",
+	Short: "Xray latency tester with Xray",
 	Run: func(cmd *cobra.Command, args []string) {
 		// Load the config and IP list
 		configManager, err := config.NewManager(configPath)
