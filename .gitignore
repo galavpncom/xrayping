@@ -23,3 +23,9 @@ go.work.sum
 
 # env file
 .env
+
+# Exclude everything in the build directory except for build/bin/.gitkeep
+build/*
+!build/bin/
+build/bin/*
+!build/bin/.gitkeep
