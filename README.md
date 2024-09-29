@@ -40,6 +40,28 @@ The app will print out the results of the latency tests for each IP address, and
 
 ---
 
+### Convert Sub-Command
+
+The `convert` sub-command allows you to convert a VPN URI into JSON for use with Sing-Box or Xray.
+
+```bash
+xrayping convert sing <singbox-uri>
+xrayping convert xray <xray-uri>
+```
+
+- `sing`: Converts the VPN URI to a Sing-Box outbound JSON format.
+- `xray`: Converts the VPN URI to an Xray outbound JSON format.
+
+#### Example:
+
+```bash
+xrayping convert sing vless://xray-config
+```
+
+This will output the VPN URI as a Sing-Box compatible JSON.
+
+---
+
 ## Flags
 
 The following flags are available for the application:
@@ -84,6 +106,8 @@ xrayping --config ./config.json --ip-list ./ips.txt --socks5 127.0.0.1:8089 --ur
 xrayping --config ./config.json --ip-list ./ips.txt --verbose
 ```
 
+---
+
 ## Build (`Makefile`)
 
 ### Explanation of Targets:
@@ -98,14 +122,7 @@ xrayping --config ./config.json --ip-list ./ips.txt --verbose
 8. **`clean`**: Removes all build artifacts and binaries.
 9. **`help`**: Provides a simple help message that lists all available Makefile targets.
 
-### Usage:
-
-- To build for the current platform: `make build`
-- To build for specific Linux platforms (e.g., `amd64`): `make build-linux-64`
-- To build for all Linux platforms: `make build-linux`
-- To format your code: `make format`
-- To clean up generated files: `make clean`
-- To see available commands: `make help`
+---
 
 ## License
 
