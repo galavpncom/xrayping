@@ -16,6 +16,12 @@
 1. **Run the `install.sh`**:
 
    ```bash
+   curl -sSL https://raw.githubusercontent.com/galavpncom/xrayping/refs/heads/main/install.sh | bash
+   ```
+
+   or
+
+   ```bash
    chmod +x install.sh
    sudo ./install.sh
    ```
