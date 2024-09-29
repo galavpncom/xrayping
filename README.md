@@ -78,6 +78,29 @@ xrayping --config ./config.json --ip-list ./ips.txt --socks5 127.0.0.1:8089 --ur
 xrayping --config ./config.json --ip-list ./ips.txt --verbose
 ```
 
+## Build (`Makefile`)
+
+### Explanation of Targets:
+
+1. **`build`**: Builds the application for the current platform.
+2. **`build-linux-64`**: Cross-compiles the app for Linux on an amd64 architecture (64-bit).
+3. **`build-linux-32`**: Cross-compiles the app for Linux on a 32-bit architecture.
+4. **`build-linux-arm32-v7a`**: Cross-compiles the app for Linux on ARM 32-bit (ARMv7-a).
+5. **`build-linux-arm64-v8a`**: Cross-compiles the app for Linux on ARM 64-bit (ARMv8-a).
+6. **`build-linux`**: Builds the application for all the supported Linux platforms (64-bit, 32-bit, ARM32, ARM64).
+7. **`format`**: Formats all Go source code using `go fmt`.
+8. **`clean`**: Removes all build artifacts and binaries.
+9. **`help`**: Provides a simple help message that lists all available Makefile targets.
+
+### Usage:
+
+- To build for the current platform: `make build`
+- To build for specific Linux platforms (e.g., `amd64`): `make build-linux-64`
+- To build for all Linux platforms: `make build-linux`
+- To format your code: `make format`
+- To clean up generated files: `make clean`
+- To see available commands: `make help`
+
 ## License
 
 This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
